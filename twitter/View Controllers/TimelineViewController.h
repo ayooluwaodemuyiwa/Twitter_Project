@@ -10,4 +10,10 @@
 
 @interface TimelineViewController : UIViewController
 
+- (void)FetchTweets:(UIRefreshControl *)FetchTweets;
+- (IBAction)buttonClicked:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
+
+- (IBAction)logoutButtonPressed:(id)sender;
 @end

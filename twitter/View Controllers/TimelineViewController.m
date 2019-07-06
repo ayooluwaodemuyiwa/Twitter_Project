@@ -48,9 +48,10 @@
     cell.tweetContent.text = tweet.text;
    // cell.favoriteCount.text = [NSString stringWithFormat:@"%d",tweet.favoriteCount];
   //  cell.retweetCount.text = [NSString stringWithFormat:@"%d",tweet.retweetCount];
-    cell.dateLabel.text = tweet.user.screenName;
+    cell.dateLabel.text = [NSString stringWithFormat:@"%s%@", "@", tweet.user.screenName];
     NSURL *profileURLImage = [NSURL URLWithString:tweet.user.profileURL];
     [cell.profilePicture setImageWithURL:profileURLImage];
+    cell.actualDate.text= tweet.createdAtString;
     
     return cell;
 }

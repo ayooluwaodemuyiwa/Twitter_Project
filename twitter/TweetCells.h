@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)didTapLike:(id)sender;
 
 @property (nonatomic, strong) NSArray<Tweet*> *tweets;
+@property (weak, nonatomic) IBOutlet UILabel *actualDate;
 
 
 @end
